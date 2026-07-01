@@ -1,0 +1,64 @@
+
+> krishna-creation@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.16.0.2:3000
+✓ Ready in 945ms
+
+○ Compiling / ...
+ GET / 500 in 5.5s (next.js: 5.3s, application-code: 222ms)
+ GET / 500 in 20ms (next.js: 10ms, application-code: 11ms)
+ GET / 500 in 17ms (next.js: 8ms, application-code: 10ms)
+ GET / 500 in 23ms (next.js: 16ms, application-code: 8ms)
+ GET / 500 in 16ms (next.js: 7ms, application-code: 9ms)
+ GET / 500 in 17ms (next.js: 8ms, application-code: 9ms)
+ GET / 500 in 28ms (next.js: 20ms, application-code: 8ms)
+ GET / 500 in 20ms (next.js: 9ms, application-code: 11ms)
+ GET / 500 in 18ms (next.js: 9ms, application-code: 8ms)
+ GET / 200 in 1034ms (next.js: 653ms, application-code: 381ms)
+ GET / 200 in 186ms (next.js: 37ms, application-code: 149ms)
+ GET / 200 in 78ms (next.js: 4ms, application-code: 73ms)
+ GET / 200 in 67ms (next.js: 5ms, application-code: 62ms)
+ GET / 200 in 78ms (next.js: 5ms, application-code: 74ms)
+ GET / 200 in 61ms (next.js: 4ms, application-code: 57ms)
+✓ Compiled in 1785ms
+ GET / 200 in 152ms (next.js: 90ms, application-code: 62ms)
+ GET / 200 in 50ms (next.js: 5ms, application-code: 45ms)
+ GET / 200 in 21ms (next.js: 5ms, application-code: 16ms)
+ GET / 200 in 169ms (next.js: 4ms, application-code: 165ms)
+ GET / 200 in 67ms (next.js: 5ms, application-code: 62ms)
+✓ Compiled in 1581ms
+ GET / 200 in 137ms (next.js: 82ms, application-code: 55ms)
+ GET / 200 in 64ms (next.js: 4ms, application-code: 60ms)
+ GET / 200 in 39ms (next.js: 4ms, application-code: 34ms)
+ GET / 200 in 38ms (next.js: 20ms, application-code: 19ms)
+ GET / 200 in 141ms (next.js: 4ms, application-code: 137ms)
+ GET / 200 in 79ms (next.js: 7ms, application-code: 72ms)
+✓ Compiled in 1615ms
+ GET / 200 in 136ms (next.js: 103ms, application-code: 33ms)
+ GET / 200 in 162ms (next.js: 4ms, application-code: 158ms)
+ GET / 200 in 60ms (next.js: 4ms, application-code: 56ms)
+ GET / 200 in 395ms (next.js: 189ms, application-code: 206ms)
+ GET /vedio.mp4 404 in 1805ms (next.js: 1745ms, application-code: 60ms)
+✓ Compiled in 1513ms
+ GET / 200 in 165ms (next.js: 96ms, application-code: 69ms)
+ GET / 200 in 31ms (next.js: 5ms, application-code: 26ms)
+ GET / 200 in 170ms (next.js: 5ms, application-code: 165ms)
+ GET / 200 in 54ms (next.js: 5ms, application-code: 49ms)
+ GET / 200 in 55ms (next.js: 4ms, application-code: 52ms)
+✓ Compiled in 1800ms
+ GET / 200 in 113ms (next.js: 89ms, application-code: 24ms)
+ GET / 200 in 147ms (next.js: 4ms, application-code: 143ms)
+✓ Compiled in 1510ms
+ GET / 200 in 97ms (next.js: 72ms, application-code: 25ms)
+✓ Compiled in 1490ms
+ GET / 200 in 95ms (next.js: 75ms, application-code: 20ms)
+ GET / 200 in 115ms (next.js: 4ms, application-code: 111ms)
+✓ Compiled in 1711ms
+ GET / 200 in 104ms (next.js: 77ms, application-code: 27ms)
+✓ Compiled in 1501ms
+ GET / 200 in 90ms (next.js: 74ms, application-code: 16ms)
+ GET / 200 in 200ms (next.js: 6ms, application-code: 194ms)
+[?25h

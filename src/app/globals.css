@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+/* No need for custom :root defaults here as we've defined theme tokens in tokens.css */
+
+@layer base {
+  html,
+  body {
+    @apply antialiased scroll-smooth;
+  }
+
+  /* Custom Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-soft);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(124, 92, 255, 0.2);
+    border-radius: 9999px;
+    border: 2px solid var(--color-bg-soft);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }
+}

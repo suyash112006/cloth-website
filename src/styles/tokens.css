@@ -1,0 +1,123 @@
+@theme {
+  --color-primary: #C8A27A;
+  --color-primary-soft: #F5ECE3;
+  --color-bg: #FCFAF8;
+  --color-bg-soft: #F0EAE1;
+  --color-text: #1C1C1C;
+  --color-text-muted: #6D6D6D;
+  
+  /* Fonts mapped to CSS variables set in layout.tsx */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-cormorant);
+
+  /* Fluid typography */
+  /* Using clamp() for smooth scaling */
+  --text-fluid-hero: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+  --text-fluid-h1: clamp(2.25rem, 1.5rem + 3vw, 4.5rem);
+  --text-fluid-h2: clamp(1.75rem, 1.25rem + 2vw, 3rem);
+
+  /* Shadows tinted lavender instead of pure black */
+  --shadow-sm: 0 1px 2px 0 rgba(124, 92, 255, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(124, 92, 255, 0.1), 0 2px 4px -2px rgba(124, 92, 255, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(124, 92, 255, 0.1), 0 4px 6px -4px rgba(124, 92, 255, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(124, 92, 255, 0.1), 0 8px 10px -6px rgba(124, 92, 255, 0.05);
+
+  --animate-aurora-1: aurora-1 60s linear infinite;
+  --animate-aurora-2: aurora-2 70s linear infinite;
+  --animate-orb-float-1: orb-float-1 30s ease-in-out infinite alternate;
+  --animate-orb-float-2: orb-float-2 35s ease-in-out infinite alternate;
+  --animate-orb-float-3: orb-float-3 25s ease-in-out infinite alternate;
+  --animate-orb-float-4: orb-float-4 40s ease-in-out infinite alternate;
+  --animate-idle-sway: idle-sway 4s ease-in-out infinite;
+  --animate-float-slow: float-slow 6s ease-in-out infinite;
+  --animate-ray-sway-1: ray-sway-1 20s ease-in-out infinite;
+  --animate-ray-sway-2: ray-sway-2 25s ease-in-out infinite;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/60 backdrop-blur-md border border-primary/10 shadow-md;
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .accelerate-gpu {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+  }
+  
+  .glow-ring {
+    position: relative;
+  }
+  
+  .glow-ring::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(124, 92, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(40px);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+@keyframes aurora-1 {
+  0% { transform: translate(0%, 0%) rotate(0deg) scale(1); }
+  33% { transform: translate(10%, -10%) rotate(120deg) scale(1.1); }
+  66% { transform: translate(-5%, 15%) rotate(240deg) scale(0.9); }
+  100% { transform: translate(0%, 0%) rotate(360deg) scale(1); }
+}
+
+@keyframes aurora-2 {
+  0% { transform: translate(0%, 0%) rotate(0deg) scale(1); }
+  33% { transform: translate(-10%, 10%) rotate(-120deg) scale(0.95); }
+  66% { transform: translate(15%, -5%) rotate(-240deg) scale(1.05); }
+  100% { transform: translate(0%, 0%) rotate(-360deg) scale(1); }
+}
+
+@keyframes orb-float-1 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(200px, -150px) scale(1.2); }
+}
+
+@keyframes orb-float-2 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(-250px, 100px) scale(0.8); }
+}
+
+@keyframes orb-float-3 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(150px, 200px) scale(1.1); }
+}
+
+@keyframes orb-float-4 {
+  0% { transform: translate(0px, 0px) scale(1); }
+  100% { transform: translate(-180px, -200px) scale(0.9); }
+}
+
+@keyframes idle-sway {
+  0% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes ray-sway-1 {
+  0% { transform: rotate(15deg) translateY(0px); opacity: 0.1; }
+  50% { transform: rotate(25deg) translateY(-20px); opacity: 0.15; }
+  100% { transform: rotate(15deg) translateY(0px); opacity: 0.1; }
+}
+
+@keyframes ray-sway-2 {
+  0% { transform: rotate(-20deg) translateY(0px); opacity: 0.1; }
+  50% { transform: rotate(-10deg) translateY(20px); opacity: 0.05; }
+  100% { transform: rotate(-20deg) translateY(0px); opacity: 0.1; }
+}
