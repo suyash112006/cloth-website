@@ -1,7 +1,8 @@
 import React, { forwardRef, MutableRefObject } from "react";
 import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 import { Product } from "./CategoryShowcase";
+import { useAppStore } from "@/lib/store";
+import { useLenis } from "lenis/react";
 
 interface ShowcaseTextProps {
   product: Product;
@@ -10,6 +11,18 @@ interface ShowcaseTextProps {
 
 const ShowcaseText = forwardRef<HTMLDivElement, ShowcaseTextProps>(
   ({ product, textRefs }, ref) => {
+    const { setSelectedCollectionCategory } = useAppStore();
+    const lenis = useLenis();
+
+    const handleShopClick = () => {
+      setSelectedCollectionCategory(product.title.toLowerCase());
+      
+      if (lenis) {
+        lenis.scrollTo("#collections", { duration: 1.5, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+      } else {
+        document.getElementById("collections")?.scrollIntoView({ behavior: "smooth" });
+      }
+    };
     
     // Helper to push refs safely
     const setRef = (el: HTMLElement | null) => {
@@ -49,13 +62,13 @@ const ShowcaseText = forwardRef<HTMLDivElement, ShowcaseTextProps>(
 
         {/* Button */}
         <div ref={setRef}>
-          <Link
-            href={`/shop/${product.title.toLowerCase()}`}
-            className="group bg-[#1A1A1A] hover:bg-[#2A2A2A] text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 inline-flex items-center gap-3 shadow-md hover:-translate-y-0.5 hover:shadow-lg"
+          <button
+            onClick={handleShopClick}
+            className="group bg-[#1C1C1C] hover:bg-[#C8A27A] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 inline-flex items-center gap-3 shadow-md hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-lg cursor-pointer"
           >
             {product.ctaLabel || `Shop ${product.title}`}
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1.5" />
-          </Link>
+          </button>
         </div>
       </div>
     );

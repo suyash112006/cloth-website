@@ -83,7 +83,7 @@ const CATEGORIES = [
 ];
 
 export default function CollectionsGrid() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const { selectedCollectionCategory: selectedCategory, setSelectedCollectionCategory: setSelectedCategory } = useAppStore();
   const [activeMobileCard, setActiveMobileCard] = useState<number | null>(null);
   const { addToCart, setCartOpen, setActiveProduct } = useAppStore();
 

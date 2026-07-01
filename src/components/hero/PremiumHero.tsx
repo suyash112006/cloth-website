@@ -262,7 +262,7 @@ const PremiumHero = React.forwardRef<HTMLElement, {}>((props, externalRef) => {
             <button
               id="hero-add-to-bag"
               onClick={handleAddToBag}
-              className="group bg-[#C8A27A] hover:bg-[#b08d66] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 flex items-center gap-3 shadow-md hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-lg cursor-pointer"
+              className="group bg-[#1C1C1C] hover:bg-[#C8A27A] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 flex items-center gap-3 shadow-md hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-lg cursor-pointer"
             >
               Shop Now
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1.5" />

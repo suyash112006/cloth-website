@@ -18,6 +18,7 @@ interface AppState {
   activeSection: string;
   activeProduct: any | null;
   cartItems: CartItem[];
+  selectedCollectionCategory: string;
 
   // Actions
   addToCart: (product: any, size: string, color: string) => void;
@@ -28,6 +29,7 @@ interface AppState {
   setMobileMenuOpen: (isOpen: boolean) => void;
   setActiveSection: (sectionId: string) => void;
   setActiveProduct: (product: any | null) => void;
+  setSelectedCollectionCategory: (category: string) => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
@@ -38,6 +40,7 @@ export const useAppStore = create<AppState>((set) => ({
   activeSection: 'home',
   activeProduct: null,
   cartItems: [],
+  selectedCollectionCategory: 'all',
 
   addToCart: (product, size, color) => set((state) => {
     const existingIndex = state.cartItems.findIndex(
@@ -96,4 +99,5 @@ export const useAppStore = create<AppState>((set) => ({
   setMobileMenuOpen: (isOpen) => set({ isMobileMenuOpen: isOpen }),
   setActiveSection: (sectionId) => set({ activeSection: sectionId }),
   setActiveProduct: (product) => set({ activeProduct: product }),
+  setSelectedCollectionCategory: (category) => set({ selectedCollectionCategory: category }),
 }));

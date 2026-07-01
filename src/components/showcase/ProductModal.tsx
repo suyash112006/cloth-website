@@ -206,7 +206,7 @@ export default function ProductModal() {
             <div className="flex items-center gap-4 mt-4">
               <button
                 onClick={handleAddToBag}
-                className="flex-1 glass bg-text text-bg hover:bg-primary py-4 rounded-full flex items-center justify-center gap-3 font-semibold transition-all shadow-md active:scale-95 cursor-magnetic"
+                className="flex-1 bg-text text-bg hover:bg-primary py-4 rounded-full flex items-center justify-center gap-3 font-semibold transition-all shadow-md active:scale-95 cursor-magnetic"
               >
                 <ShoppingBag size={18} />
                 Add to Bag
